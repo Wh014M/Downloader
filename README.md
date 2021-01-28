@@ -8,7 +8,7 @@
 [![Build Status](https://dev.azure.com/kadzicuh/Downloader/_apis/build/status/kadzicuh.Downloader?branchName=main)](https://dev.azure.com/kadzicuh/Downloader/_build/latest?definitionId=12&branchName=main)
 
  ## 📷 Screenshot:
-![Screenshot](Screenshot.png)
+![Screenshot](ScreenShot.png)
 
 ## 📃 License
 Downloader is distributed under the [MIT License](LICENSE).
