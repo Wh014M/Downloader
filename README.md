@@ -5,7 +5,7 @@
  Downloader is ONLY intended to be used on your own pentesting labs, or with explicit consent from the owner of the property being tested.** 
 
 [![GitHub](https://img.shields.io/github/license/kadzicuh/Downloader)](LICENSE)
-[![Build Status](https://dev.azure.com/kadzicuh/Crypter/_apis/build/status/kadzicuh.Crypter?branchName=main)](https://dev.azure.com/kadzicuh/Crypter/_build/latest?definitionId=12&branchName=main)
+[![Build Status](https://dev.azure.com/kadzicuh/Downloader/_apis/build/status/kadzicuh.Downloader?branchName=main)](https://dev.azure.com/kadzicuh/Downloader/_build/latest?definitionId=12&branchName=main)
 
  ## 📷 Screenshot:
 ![Screenshot](Screenshot.png)
