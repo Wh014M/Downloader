@@ -3,9 +3,18 @@ using System.Net;
 using System.Reflection;
 using System.Threading;
 
-namespace Downloader
+[assembly: AssemblyTitle("#Title#")]
+[assembly: AssemblyDescription("#Description#")]
+[assembly: AssemblyCompany("#Company#")]
+[assembly: AssemblyProduct("#Product#")]
+[assembly: AssemblyCopyright("#Copyright#")]
+[assembly: AssemblyTrademark("#Trademark#")]
+[assembly: AssemblyFileVersion("#v1#" + "." + "#v2#" + "." + "#v3#" + "." + "#v4#")]
+[assembly: AssemblyVersion("#v1#" + "." + "#v2#" + "." + "#v3#" + "." + "#v4#")]
+
+namespace NameSpace
 {
-    internal static class TEST
+    internal static class NameClass
     {
         private static readonly List<string> _URL_List = new List<string>(new string[] { "#URL#" });
 
